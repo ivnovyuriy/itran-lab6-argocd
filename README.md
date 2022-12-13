@@ -9,6 +9,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl port-forward --address 0.0.0.0 svc/argocd-server -n argocd 8080:443
 ```
 
+Now we can login via web on the address:
+
+public_ip:8080
+
+
+
 2. Installing CLI 
 
 ```
@@ -23,6 +29,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 
 OUTPUT will be smth like this: HbjIRYnUjywH35JJ
+
+![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/2.png)
 
 4. ArgoCD login
 
@@ -46,8 +54,8 @@ argocd app create wordpress --repo https://github.com/ivnovyuriy/wordpress-chart
 argocd app sync wordpress
 argocd app set wordpress --sync-policy automated
 ```
-![Jenkins](https://github.com/ivnovyuriy/itran-lab5-jenkins/blob/bca906fb397429d2fcc7ed654f8aa344d0871942/img/1.png)
-![Jenkins](https://github.com/ivnovyuriy/itran-lab5-jenkins/blob/bca906fb397429d2fcc7ed654f8aa344d0871942/img/1.png)
+![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/3.png)
+![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/4.png)
 
 6. Add User deploy && manage user permissions
 
@@ -56,10 +64,10 @@ kubectl apply -f new-user.yaml
 argocd account update-password --account deploy
 kubectl apply -f user-perm.yaml
 ```
-IMAGE
+![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/4.png)
 
 7. Check User permissions 
 
-IMAGE
+![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/5.png)
 
 
