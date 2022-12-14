@@ -1,5 +1,5 @@
 
-# ArdoCD with Wordpress Application && Notifying to Telegram app
+# ArdoCD with Wordpress Application
 
 1. Installing ArgoCD and Proxifying it to our publicIP
 
