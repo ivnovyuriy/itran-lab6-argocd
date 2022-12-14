@@ -55,7 +55,6 @@ argocd app sync wordpress
 argocd app set wordpress --sync-policy automated
 ```
 ![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/3.png)
-![ArgoCD](https://github.com/ivnovyuriy/itran-lab6-argocd/blob/894565782fa49ff3b83e502405d963f49447c584/img/4.png)
 
 6. Add User deploy && manage user permissions
 
